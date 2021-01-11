@@ -1,26 +1,59 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="container">
+    <div id="mode-changer">
+      <mode-changer/>
+    </div>
+    <div id="clock">
+      <Clock/>
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Clock from './components/Clock.vue'
+import ModeChanger from './components/ModeChanger.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Clock,
+    ModeChanger
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import url('assets/fontello/css/fontello.css');
+
+@font-face {
+  font-family: 'Fontello';
+  src: url('assets/fontello/font/fontello.ttf');
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('assets/open-sans/OpenSans-Bold.ttf')
+}
+
+body {
+  font-family: 'MyWebFont', 'Fontello', Fallback, sans-serif;
+  color: #ffffff;
+  background-color: #121212;
+}
+
+.container {
+  display: inline-block;
+}
+
+#mode-changer {
+  float: right;
+  height: 5%;
+}
+
+#clock {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>
