@@ -1,5 +1,5 @@
 # clock
-
+A Simple Clock with Vue.js https://mrmlik12.github.io/clock/
 ## Project setup
 ```
 npm install
